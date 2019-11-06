@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+	<title>咨询医生</title>
+	<meta name="description" content="	">
+	<meta name="keywords" content="	">
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+	<meta content="yes" name="apple-mobile-web-app-capable">
+	<meta content="black" name="apple-mobile-web-app-status-bar-style">
+	<meta content="telephone=no" name="format-detection">
+
+	<link rel="stylesheet" type="text/css" href="./doctor/public.css">
+	<link rel="stylesheet" type="text/css" href="./doctor/doctor.css">
+	<script src="./doctor/jquery-1.7.1.min.js"></script>
+	<script src="./doctor/my_iscroll.js"></script>
+</head>
+<body style="">
+	<div style="height:46px;">
+		<div class="ListSearch">
+			<form id="sear_form" action="http://m.120ask.com/kuaiwen/site/doctor/list_doctor" onsubmit="return false;">
+				<input id="search_val" type="search" placeholder="搜索医生名，科室，疾病" value="">
+				<a class="cancelBtn" href="javascript:;">取消</a>
+				<em></em>
+			</form>
+		</div>
+	</div>
+	<!-- 搜索 -->
+	<div class="Search" style="display:none">
+		<ul class="SearchUl">
+			<li class="on"><span><i>最近搜索</i></span></li>
+			<li class=" lastChild"><span><i>热门搜索</i></span></li>
+		</ul>
+		<div class="SearchCon">
+			<div class="SearchCon1">
+				<ul class="SearchCon1ul">
+				</ul>
+				<a class="cleanAll" href="http://m.120ask.com/kuaiwen/site/doctor/list_online?type=tel#">清空搜索记录</a>
+			</div>
+			<div class="SearchCon2" style="display:none">
+				<ul class="SearchCon2ul">
+					<li><a href="javascript:;">月经不调</a></li>
+					<li><a href="javascript:;">妇科炎症</a></li>
+					<li><a href="javascript:;">尖锐湿疣</a></li>
+					<li><a href="javascript:;">前列腺炎</a></li>
+					<li><a href="javascript:;">阴道炎</a></li>
+					<li><a href="javascript:;">宫颈炎</a></li>
+					<li><a href="javascript:;">高血压</a></li>
+					<li><a href="javascript:;">糖尿病</a></li>
+					<li><a href="javascript:;">早泄</a></li>
+					<li><a href="javascript:;">阳痿</a></li>
+					<li><a href="javascript:;">肾虚</a></li>
+					<li><a href="javascript:;">痔疮</a></li>
+					<li><a href="javascript:;">痤疮</a></li>
+					<li><a href="javascript:;">祛斑</a></li>
+					<li><a href="javascript:;">便秘</a></li>
+					<li><a href="javascript:;">性病</a></li>
+					<li><a href="javascript:;">湿疹</a></li>
+					<li><a href="javascript:;">失眠</a></li>
+					<li><a href="javascript:;">梅毒</a></li>
+					<li><a href="javascript:;">脱发</a></li>
+					<li><a href="javascript:;">肺炎</a></li>
+					<li><a href="javascript:;">鼻炎</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="ListAbout wx_wrap">
+		<div class="ListAboutLeft" id="outer" style="bottom:0px;">
+			<div id="inner" style="transition-property: transform; transform-origin: 0px 0px; transform: translate(0px, 0px) translateZ(0px);">
+				<ul class="category1">
+
+					<li id="dept-0" class="cur search_opt">全部</li>
+					<li id="dept-6/403" class=" search_opt">妇科</li>
+					<li id="dept-6/408" class=" search_opt">产科</li>
+					<li id="dept-18/509" class=" search_opt">男科</li>
+					<li id="dept-3" class=" search_opt">儿科</li>
+					<li id="dept-9/429" class=" search_opt">皮肤科</li>
+					<li id="dept-9/430" class=" search_opt">性病科</li>
+					<li id="dept-7" class=" search_opt">心理咨询</li>
+					<li id="dept-1" class=" search_opt">内科</li>
+					<li id="dept-2" class=" search_opt">外科</li>
+					<li id="dept-13" class=" search_opt">骨科</li>
+					<li id="dept-542/12" class=" search_opt">眼科</li>
+					<li id="dept-542/5" class=" search_opt">耳鼻喉科</li>
+					<li id="dept-542/8" class=" search_opt">口腔科</li>
+					<li id="dept-10" class=" search_opt">中医科</li>
+					<li id="dept-11" class=" search_opt">肿瘤科</li>
+					<li id="ctype-3" class=" search_opt">用药咨询</li>
+					<li id="ctype-4" class=" search_opt">护理咨询</li>
+					<li id="dept-511" class=" search_opt">营养科</li>
+					<li id="dept-4" class=" search_opt">传染病科</li>
+					<li id="dept-18/493" class=" search_opt">全科</li>
+					<li id="dept-544" class=" search_opt">报告解读</li>
+				</ul>
+			</div>
+			<div style="position: absolute; z-index: 100; width: 7px; bottom: 2px; top: 2px; right: 1px; pointer-events: none; transition-property: opacity; transition-duration: 350ms; overflow: hidden; opacity: 0;">
+				<div style="position: absolute; z-index: 100; background: padding-box padding-box rgba(0, 0, 0, 0.5); border: 1px solid rgba(255, 255, 255, 0.9); box-sizing: border-box; width: 100%; border-radius: 3px; pointer-events: none; transition-property: transform; transition-timing-function: cubic-bezier(0.33, 0.66, 0.66, 1); transform: translate(0px, 0px) translateZ(0px); height: 385px;"></div>
+			</div>
+		</div>
+		<div class="ListAboutRight" id="outer1" style="-webkit-box-flex:1;">
+			<div id="inner1">
+				<div class="diseaseList">
+					<a class="animated flipInX search_opt cur" id="order-synthesis" href="javascript:;">综合排序</a>
+					<a class="animated flipInX search_opt" id="order-price" href="javascript:;">按价格排序 </a>
+					<a class="animated flipInX" id="x-doclevel" href="javascript:doclevel();">更多条件&gt;</a>
+				</div>
+				<div class="dorList infinite_scroll">
+					<div class="doctorList">
+						<a class="Doctor" href="./doctorDesc.html">
+							<dl class="buyDoctor buyDoctor1 clears buyDoctorList">
+								<dt>
+									<var class="online_status">
+										<img src="./doctor/a.gif" width="50" height="59">
+										<i class="online"></i>
+									</var>
+								</dt>
+								<dd><b>孙国慧</b><em style="display:inline-block;margin-left:10px;">副主任医师</em>
+								</dd>
+								<dd class="price"><var><strong>99元</strong>/次</var></dd>
+								<dd class="good">好评率:100%</dd>
+								<dd class="buyDoctorP">皮肤科：脂溢性皮炎,尖锐湿疣,带状疱疹,扁平疣,毛囊炎,真菌病,荨麻疹,风疹,湿疹,痤疮,皮炎,麻疹,生殖器疱疹</dd>
+								<dd style="display:none_show;" class="video_btn">可开方</dd>
+							</dl>
+						</a>
+						<div class="buyAbout">
+							<a href="http://m.120ask.com/kuaiwen/site/doctor?id=81591&amp;showwxpaytitle=1"><var><em></em><span>已帮助<b>1130人</b></span></var></a>
+							<i><a href="http://m.120ask.com/kuaiwen/site/doctor?id=81591&amp;showwxpaytitle=1">向TA咨询</a></i>
+						</div>
+					</div>
+					<div class="doctorList">
+						<a class="Doctor" href="./doctorDesc.html">
+							<dl class="buyDoctor buyDoctor1 clears buyDoctorList">
+								<dt>
+									<var class="online_status">
+										<img src="./doctor/a.gif" width="50" height="59">
+										<i class="online"></i>
+									</var>
+								</dt>
+								<dd><b>崔少霞</b><em style="display:inline-block;margin-left:10px;">副主任医师</em>
+								</dd>
+								<dd class="price"><var><strong>99元</strong>/次</var></dd>
+								<dd class="good">好评率:100%</dd>
+								<dd class="buyDoctorP">口腔科：牙髓炎,口腔溃疡,牙周炎,龋齿,牙龈炎,鹅口疮,三叉神经痛</dd>
+								<dd style="display:none_show;" class="video_btn">可开方</dd>
+							</dl>
+						</a>
+						<div class="buyAbout">
+							<a href="http://m.120ask.com/kuaiwen/site/doctor?id=71026&amp;showwxpaytitle=1"><var><em></em><span>已帮助<b>707人</b></span></var></a>
+							<i><a href="http://m.120ask.com/kuaiwen/site/doctor?id=71026&amp;showwxpaytitle=1">向TA咨询</a></i>
+						</div>
+					</div>
+				</div>
+				<!-- 搜索为空 -->
+				<div class="SearchNone" style="display:none">
+					<b>没有找到相关医生</b>
+					<p>请直接输入疾病词，如<span>高血压</span></p>
+				</div>
+				<div id="page" class="page" style="display: none;">已加载到最后</div>
+			</div>
+		</div>
+	</div>
+	<div class="select_typebg"></div>
+	<div id="select_type" class="loadBox2">
+		<i class="p_pullico"></i>
+		<div class="uti">价格区间：</div>
+		<ul class="type checkType">
+			<li id="pblock-1" class="">25-49</li>
+			<li id="pblock-2" class="cur">55-99</li>
+			<li id="pblock-3" class="">100+</li>
+		</ul>
+		<div class="uti">职称：</div>
+		<ul class="type checkType">
+			<li id="clinic-1" class="">初级</li>
+			<li id="clinic-2" class="cur">中级</li>
+			<li id="clinic-3" class="">高级</li>
+		</ul>
+		<div class="uti">服务类型：</div>
+		<ul class="type2 checkType">
+			<li id="service-1" class="">单次　图文咨询</li>
+			<li id="service-2" class="">包时段　图文+电话咨询</li>
+			<li id="service-3" class="">电话咨询服务在线</li>
+		</ul>
+		<span><a class="p_cannel" href="javascript:void(0);">清除设置</a><a href="javascript:set_ok();">完成设置</a></span>
+	</div>
+
+	<script type="text/javascript">
+		function prevent(e) {
+			//弹出评论框状态下禁止页面滚动
+			e.preventDefault();
+			return;
+		}
+		/**
+		 * Array unique function,同时将去掉null及undefined
+		 * @param {Array} ary 需要进行unique的数组.
+		 * @return {Array} 返回经过去重的新的数组，
+		 * 不会修改原来的数组内容.
+		 */
+		$('.diseaseList a').each(function() {
+			$(this).click(function() {
+				var d_id = $(this).attr('id');
+				if (d_id != "x-doclevel") {
+					$(".diseaseList a[id!='" + d_id + "']").removeClass('cur');
+					$(this).addClass('cur');
+				}
+			});
+		});
+
+		function doclevel() {
+			$("#select_type").animate({
+				'right': 0
+			}, 300);
+			$('.select_typebg').show();
+			tj_log = 'doclevel';
+
+		}
+		$(".checkType li").each(function() {
+			$(this).click(function() {
+				if ($(this).hasClass('cur')) {
+					$(this).removeClass('cur');
+				} else {
+					$(this).addClass('cur');
+				}
+				//var id = $(this).attr('id');
+				$(this).siblings().removeClass('cur');
+				//$(".type li[id!='"+id+"']").removeClass('cur');
+				//$("#select_type").animate({'left':1000},300);
+				//send_url();
+			})
+		})
+		$('.p_cannel').click(function() {
+			$(".checkType li").removeClass('cur');
+		});
+
+		$('.select_typebg,.p_pullico').click(function() {
+			$('#select_type').animate({
+				'right': '-90%'
+			}, 300);
+			$('.select_typebg').hide();
+		});
+
+		function set_ok() {
+			$('#select_type').animate({
+				'right': '-90%'
+			}, 300);
+			$('.select_typebg').hide();
+			$(".diseaseList a[id!='x-doclevel']").removeClass('cur');
+			$(".diseaseList a[id='x-doclevel']").addClass('cur');
+			send_url();
+		}
+
+		function unique(ary) {
+			var i = 0,
+				gid = '_' + (+new Date) + Math.random(),
+				objs = [],
+				hash = {
+					'string': {},
+					'boolean': {},
+					'number': {}
+				},
+				p, l = ary.length,
+				ret = [];
+			for (; i < l; i++) {
+				p = ary[i];
+				if (p == null) continue;
+				tp = typeof p;
+				if (tp in hash) {
+					if (!(p in hash[tp])) {
+						hash[tp][p] = 1;
+						ret.push(p);
+					}
+				} else {
+					if (p[gid]) continue;
+					p[gid] = 1;
+					objs.push(p);
+					ret.push(p);
+				}
+			}
+			for (i = 0, l = objs.length; i < l; i++) {
+				p = objs[i];
+				p[gid] = undefined;
+				delete p[gid];
+			}
+			return ret;
+		}
+
+
+		/**
+		 * 设置COOKIE
+		 * @param exp 过期时间（单位：分）
+		 */
+		function set_cookie(name, val, exp) {
+			var today = new Date();
+			var expireDay = new Date();
+			var msPerMonth = 60 * 1000 * exp;
+			expireDay.setTime(today.getTime() + msPerMonth);
+			document.cookie = name + "=" + val + ";expires=" + expireDay.toGMTString();
+		}
+
+		/**
+		 * 获取COOKIE
+		 */
+		function get_cookie(name) {
+			var search = name + "=";
+			begin = document.cookie.indexOf(search);
+			if (begin != -1) {
+				begin += search.length;
+				end = document.cookie.indexOf(";", begin);
+				if (end == -1) end = document.cookie.length;
+				return document.cookie.substring(begin, end);
+			}
+		}
+
+		var ajax_busy = false; //ajax 请求标记
+		var tuch_end = true; // 滑动到底部请求标记
+		var last_page = false; // 当前最后一页标记
+		var p = 1;
+		var tj_log = '';
+
+		function formart_par(repage) {
+			if (repage) {
+				p = 1;
+			}
+			var str = '?page=' + p;
+			$('.cur').each(function() {
+				var obj = $(this).attr('id');
+				var tmp = obj.split('-');
+
+				if (str) {
+					str += '&' + tmp[0] + '=' + tmp[1];
+				} else {
+					str = '?' + tmp[0] + '=' + tmp[1];
+				}
+			});
+			var kw = $('#search_val').val();
+			if (kw) {
+				str += '&kw=' + encodeURIComponent(kw);
+			}
+			if (str.indexOf('dept') == -1) {}
+			if (tj_log) str += '&tj_log=' + tj_log;
+			return str;
+		}
+
+		function handle_search() {
+			//隐藏搜索相关
+			$(".ListAbout").show();
+			$(".Search").hide();
+			//处理搜索词
+			var tmp_val = $('#search_val').val();
+			if (tmp_val) {
+				var search_str = get_cookie('search_log');
+				if (search_str) {
+					var search_arr = search_str.split(',');
+					if (search_arr.length > 20) {
+						search_arr.pop();
+					}
+					search_arr.unshift(encodeURIComponent($.trim(tmp_val)));
+					unique(search_arr);
+					search_val = search_arr.join(',');
+				} else {
+					search_val = encodeURIComponent($.trim(tmp_val));
+				}
+				set_cookie('search_log', search_val, 10000000);
+				$('.cancelBtn').show();
+			}
+		}
+
+		function send_url() {
+			handle_search();
+			parstr = formart_par(true);
+			var strUrl = "/kuaiwen/site/doctor/list_doctor" + parstr;
+			$.ajax({
+				url: strUrl,
+				type: "GET",
+				dataType: "html",
+				async: true,
+				beforeSend: function() {
+					ajax_busy = true;
+					window.addEventListener("touchmove", prevent, false);
+					// $('.ListSearchBg').show();
+					// $('.ListSearchBox').show();
+				},
+				complete: function() {
+					ajax_busy = false;
+					window.removeEventListener("touchmove", prevent, false);
+					// $('.ListSearchBg').hide();
+					// $('.ListSearchBox').hide();
+					tuch_end = true;
+				},
+				success: function(data) {
+					if (data) {
+						$('.diseaseList').show();
+						$('.dorList').empty().append(data);
+						$('.SearchNone').hide();
+						p++;
+						$(".infinite_scroll").find(".num1").each(function() {
+							var num = parseInt($(this).html());
+							var Widths = parseInt($(this).parent().prev().css("width"));
+							var aWidth = Widths / 100;
+							$(this).parent().prev().find("em").css("width", aWidth * num);
+						});
+						last_page = false;
+						var htmlHeight = document.body.scrollHeight || document.documentElement.scrollHeight;
+						var clientHeight = document.documentElement.clientHeight;
+						if (htmlHeight < (clientHeight + 50)) {
+							// $("#load").hide();
+							$("#page").show();
+						} else {
+							// $("#load").show();
+							$('#page').hide();
+						}
+					} else {
+						$('.diseaseList').hide();
+						$('.dorList').empty();
+						$('.SearchNone').show();
+						// $("#load").hide();
+						$('.page').hide();
+						last_page = true;
+					}
+				}
+			});
+			tj_log = '';
+		}
+
+		function more_page() {
+			if (ajax_busy == false && !last_page) {
+				parstr = formart_par(false);
+				var strUrl = "/kuaiwen/site/doctor/list_doctor" + parstr;
+				$.ajax({
+					url: strUrl,
+					type: "GET",
+					dataType: "html",
+					async: false,
+					beforeSend: function() {
+						ajax_busy = true;
+					},
+					complete: function() {
+						ajax_busy = false;
+					},
+					success: function(data) {
+						if (data) {
+							$('.dorList').append(data);
+							$(".infinite_scroll").find(".num1").each(function() {
+								var num = parseInt($(this).html());
+								var Widths = parseInt($(this).parent().prev().css("width"));
+								var aWidth = Widths / 100;
+								$(this).parent().prev().find("em").css("width", aWidth * num);
+							});
+							p++;
+							last_page = false;
+						} else {
+							// $("#load").hide();
+							$('#page').show();
+							last_page = true;
+						}
+						tuch_end = true;
+					}
+				});
+			}
+		}
+
+		$(function() {
+			var aList = $(".diseaseList a")
+			for (var i = 0; i < aList.length; i++) {
+				aList.eq(i).addClass("flipInX");
+			};
+			send_url();
+		})
+
+		$(".infinite_scroll").find(".num1").each(function() {
+			var num = parseInt($(this).html());
+			var Widths = parseInt($(this).parent().prev().css("width"));
+			var aWidth = Widths / 100;
+			$(this).parent().prev().find("em").css("width", aWidth * num);
+		});
+		$(window).resize(function() {
+			$(".infinite_scroll").find(".num1").each(function() {
+				var num = parseInt($(this).html());
+				var Widths = parseInt($(this).parent().prev().css("width"));
+				var aWidth = Widths / 100;
+				$(this).parent().prev().find("em").css("width", aWidth * num);
+			});
+		});
+
+		$(".SearchUl li").each(function(index) {
+			$(this).click(function() {
+				$(this).addClass("on").siblings().removeClass("on");
+				$(".SearchCon>div:eq(" + index + ")").show().siblings().hide();
+			})
+		})
+		// 搜索
+		$(".ListSearch form input").focus(function() {
+			$(this).parents('.ListSearch').css({
+				'position': 'absolute',
+				'top': '0px',
+				'left': '0px'
+			})
+			$(this).next().show();
+			$(".ListAbout").hide();
+			$(".Search").show();
+			$('.SearchCon1ul').empty();
+			var search_str = get_cookie('search_log');
+			if (search_str) {
+				var search_arr = search_str.split(',');
+				search_arr = unique(search_arr);
+				var html_str = '';
+				$.each(search_arr, function(i, val) {
+					html_str += "<li><a href='javascript:;'>" + decodeURIComponent(val) + "</a></li>"
+				});
+				$('.SearchCon1ul').append(html_str);
+				$('.cleanAll').show();
+			} else {
+				$('.cleanAll').hide();
+				//如果么有记录显示热门搜索
+				$('.SearchUl').find('li').removeClass("on");
+				$('.SearchUl').find('li:eq(1)').addClass("on");
+				$(".SearchCon>div:eq(1)").show().siblings().hide();
+			}
+		})
+		$(".ListSearch form input").blur(function() {
+			$(this).parents('.ListSearch').css({
+				'position': 'fixed',
+				'top': '0px',
+				'left': '0px'
+			})
+		})
+		$('#sear_form').submit(function() {
+			$(".ListSearch form input").blur();
+			$('.cur').removeClass('cur');
+			$('#dept-0').addClass('cur');
+			$('#order-synthesis').addClass('cur');
+			send_url();
+			return false;
+		});
+		$('#search_val').keydown(function(event) {
+			$("#sear_form em").show();
+		});
+		$('#search_val').keyup(function(event) {
+			var val = $(this).val();
+			if (!val == "") {
+				$("#sear_form em").show();
+			} else {
+				$("#sear_form em").hide();
+			}
+		});
+		$("#search_val").focus(function() {
+			$(".Tips_div").hide();
+			var val = $(this).val();
+			if (!val == "") {
+				$("#sear_form em").show();
+			} else {
+				$("#sear_form em").hide();
+			}
+		})
+		$("#sear_form em").click(function() {
+			$("#search_val").val('');
+			$(this).hide()
+		})
+		$("body").delegate('.search_opt', "click", function() {
+			$(this).parent().find('.cur').removeClass('cur');
+			$(this).addClass('cur');
+			tj_log = $(this).attr('id');
+			send_url();
+		});
+
+
+		$(".cancelBtn").click(function() {
+			$(".Tips_div").show();
+			$(".ListAbout").show();
+			$(".Search").hide();
+			$("#sear_form em").hide();
+			var kw = $("#search_val").val('');
+			if (kw) {
+				$("#search_val").val('');
+				send_url();
+			}
+			$(this).hide();
+		})
+
+		$(".SearchCon").delegate("li", 'click', function() {
+			var liHtml = $(this).find("a").html();
+			$("#search_val").val(liHtml);
+			$(".ListSearch form input").blur();
+			$('.cur').removeClass('cur');
+			$('#dept-0').addClass('cur');
+			$('#order-synthesis').addClass('cur');
+			send_url();
+		})
+
+
+		$(".cleanAll").click(function() {
+			set_cookie('search_log', '', 10000000);
+			$('.SearchCon1ul').empty();
+		})
+		$(".category1 li").each(function(index) {
+			$(this).click(function() {
+				$(this).addClass("cur").siblings().removeClass("cur");
+				var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+				if (scrollTop > 0) {
+					document.documentElement.scrollTop = document.body.scrollTop = 0;
+				}
+				/* if (index<3) {
+				$(this).parent().parent().css({"-webkit-transition":"300ms cubic-bezier(0.1, 0.57, 0.1, 1)","-webkit-transform":"translate(0px,"+(-45*index)+"px) translateZ(0px)"})
+				}else{
+					$(this).parent().parent().css({"-webkit-transition":"300ms cubic-bezier(0.1, 0.57, 0.1, 1)","-webkit-transform":"translate(0px,"+(-135)+"px) translateZ(0px)"})
+				} */
+			})
+		})
+
+		var myscroll;
+
+		function loaded() {
+			myscroll = new iScroll("outer");
+		}
+		window.addEventListener("load", loaded, false);
+		$(window).scroll(function() {
+			var htmlHeight = document.body.scrollHeight || document.documentElement.scrollHeight;
+			var clientHeight = document.documentElement.clientHeight;
+			var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+			if (scrollTop + clientHeight > (htmlHeight - 100)) {
+				if (tuch_end) {
+					tuch_end = false;
+					more_page();
+				}
+			}
+		})
+	</script>
+
+	<div class="SerBottom">
+		<a href="http://m.120ask.com/kuaiwen/site/user/my_tel" class="boxBtnnone">我的私人医生</a>
+	</div>
+	<article class="SureBuy" id="stip_box">
+		<div class="SureBuy_C">
+			<div class="SureBuy_txt" id="stip_txt"></div>
+			<div class="SureBuy_btn">
+				<button id="stip_cancel">否</button>
+				<button id="stip_sure">是</button>
+			</div>
+		</div>
+	</article>
+</body>
+</html>

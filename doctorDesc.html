@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>医生详情</title>
+		<meta name="description" content="快速问医生">
+		<meta name="keywords" content="快速问医生">
+		<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+		<meta content="yes" name="apple-mobile-web-app-capable">
+		<meta content="black" name="apple-mobile-web-app-status-bar-style">
+		<meta content="telephone=no" name="format-detection">
+		<link rel="stylesheet" type="text/css" href="./doctor/public.css">
+		<link rel="stylesheet" type="text/css" href="./doctor/doctor.css">
+		<script src="./doctor/jquery-1.7.1.min.js		"></script>
+		<script>
+			if (typeof window.wView !== "undefined") {
+				window.wView.allowsInlineMediaPlayback = "YES";
+				window.wView.mediaPlaybackRequiresUserAction = "NO";
+			}
+		</script>
+	<body style="">
+		<div id="main">
+			<p class="header">编号：<span>@81591</span>每一天，我都在努力追求做的更好.</p>
+
+			<div class="HomeTop">
+				<dl class="HomeTopDl clears">
+					<dt>
+						<var class="online_status">
+							<img src="./doctor/a.gif" width="64" height="76">
+							<i class="online"></i>
+						</var>
+					</dt>
+					<dd><b>孙国慧</b></dd>
+					<dd class="HomeTopDd"><span>皮肤科</span><span>副主任医师</span></dd>
+
+					<dd class="HomeTopDd"><span>执业编号：110210500000234</span></dd>
+				</dl>
+				<span class="HomeTopAtten doctor_cen-attention" id="op_doc_attention" style="display:none;"><i>+</i><em id="show_attention">加关注</em></span>
+
+				<span class="HomeTopAtten doctor_cen-attention" id="give_gift" style="top:70px;background-color: #ff7800;"><img src="./doctor/gift.png"
+					 width="72"></span>
+
+			</div>
+			<div class="v1HomeIntro">
+				<div class="v1HomeIntrodiv clears">
+					<span class="v1HomeIntrodivspan">疾病擅长</span>
+					<p class="v1HomeIntrodivp">
+						<var class="txt1" style="">脂溢性皮炎,尖锐湿疣,带状疱疹,扁平疣,毛囊炎,真菌病,荨麻疹,风疹,湿疹,痤疮,皮炎,麻疹,生殖器疱疹</var>
+						<var class="txt2" style="display: none;">脂溢性皮炎,尖锐湿疣,带状疱疹,扁平疣,毛囊炎,真菌病,荨麻...</var>
+						<a class="s_zk" href="javascript:;">收起↑</a>
+					</p>
+				</div>
+			</div>
+			<div class="DorPartAbout">
+				<ul class="DorPartAboutL">
+					<li>接受咨询：<span>1130人</span></li>
+					<li>好评：<span>236人</span></li>
+					<li>购买服务：<span>650人</span></li>
+					<li>超过<b>89%</b>的皮肤科医生</li>
+				</ul>
+				<div class="DorPartAboutR">
+					<span>
+						0分45秒 </span>
+					<b>平均应答时间</b>
+				</div>
+			</div>
+			<!-- 2014-12-22 liuna end -->
+			<!-- 分享 -->
+			<div class="HomeSerPart2">
+				<h4 class="clears"><img src="./doctor/a.gif" width="17" height="20"><span>亲：我为您提供以下服务</span></h4>
+				<div class="Ways">
+					<div class="WaysOne">
+						<a target="_top" href="">
+							<dl class="clears">
+								<dt></dt>
+								<dd class="WaysOneDd1"><em></em><span>单次在线咨询</span><b>￥99元/次</b></dd>
+								<dd class="WaysOneDd2"><var>已有634人购买</var></dd>
+							</dl>
+						</a>
+						<ul class="WaysTwoList">
+							<li>您可以文字咨询我，或者电话咨询我!</li>
+							<li class="time"><a href="javascript:;" class="timeBtn">查看电话咨询时间</a></li>
+						</ul>
+					</div>
+					<div class="service_item">
+						<ul>
+							<img src="./doctor/videoico.png">
+							<div style="padding-top:3px;">
+								<b>视频咨询</b> 与医生面对面咨询
+							</div>
+							<em style="padding-top:13px;"><b>￥300元/次</b></em>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="timeBoxBg"></div>
+			<div class="timeBox">
+				<em class="closeBtn"></em>
+				<p class="">
+					<b>周一</b>
+					<span>
+						<var>10:00-11:00</var>
+						<var>14:00-17:00</var>
+						<var>19:00-22:00</var>
+					</span>
+				</p>
+				<p class="">
+					<b>周二</b>
+					<span>
+						<var>10:00-11:00</var>
+						<var>14:00-17:00</var>
+						<var>19:00-22:00</var>
+					</span>
+				</p>
+				<p class="on">
+					<b>周三</b>
+					<span>
+						<var>10:00-11:00</var>
+						<var>14:00-17:00</var>
+						<var>19:00-22:00</var>
+					</span>
+				</p>
+				<p class="">
+					<b>周四</b>
+					<span>
+						<var>10:00-11:00</var>
+						<var>14:00-17:00</var>
+						<var>19:00-22:00</var>
+					</span>
+				</p>
+				<p class="">
+					<b>周五</b>
+					<span>
+						<var>10:00-11:00</var>
+						<var>14:00-17:00</var>
+						<var>19:00-22:00</var>
+					</span>
+				</p>
+				<p class="">
+					<b>周六</b>
+					<span>
+						<var>6:00-7:00</var>
+						<var>8:00-9:00</var>
+						<var>10:00-11:00</var>
+						<var>13:00-18:00</var>
+						<var>19:00-22:00</var>
+					</span>
+				</p>
+				<p class="">
+					<b>周日</b>
+					<span>
+						<var>6:00-7:00</var>
+						<var>8:00-9:00</var>
+						<var>10:00-12:00</var>
+						<var>13:00-17:00</var>
+						<var>19:00-22:00</var>
+					</span>
+				</p>
+			</div>
+
+			<div class="commentB">
+				<div class="commentB_t d_box"><span class="s1"><i></i>好评率:<em>100%</em></span><span class="s2"><i></i>心意礼物:<em>217个</em></span></div>
+				<div class="commentB_list">
+					<b>患者印象：</b>
+					<ul>
+						<li><span class="normal">解答详细(159)</span></li>
+						<li><span class="normal">态度良好(152)</span></li>
+						<li><span class="normal">富有爱心(135)</span></li>
+						<li><span class="normal">医术精湛(130)</span></li>
+						<li><span class="normal">回复及时(2)</span></li>
+						<li><span class="normal">讲解仔细(2)</span></li>
+						<li style="display: none;"><span class="normal">亲切友好(1)</span></li>
+					</ul>
+					<div class="showBtn"><i></i></div>
+				</div>
+			</div>
+			<script type="text/javascript">
+				//增加视频门诊跳转
+				$('.service_item .link').click(function(event) {
+					var url = "https://k.120.net/service/inquiry/create?tel_from=inquiry_ysdcy&doctor_id=81591";
+					window.location.href = url
+				});
+
+
+				function change_doc_tag() {
+					$.post('/kuaiwen/site/doctor/ajax_doc_tags', {
+						'doc_id': '81591'
+					}, function(s) {
+						if (s) $('.commentB_list ul').html(s);
+						ulShow();
+					});
+				}
+				$(document).ready(function() {
+					change_doc_tag();
+				});
+
+				function ulShow() {
+					var a = $(".commentB_list ul li:gt(5)");
+					a.hide();
+					$(".showBtn").click(function() {
+						if (a.is(':visible')) {
+							a.slideUp('fast');
+							$(this).removeClass('hide');
+						} else {
+							a.slideDown('fast').show();
+							$(this).addClass('hide');
+						}
+					});
+				}
+			</script>
+
+			<div class="EvList">
+				<div class="m09_contdiv1 ev_cont1div1">
+					<div class="m09_evaluate">
+						<p class="m09_evaluatep clears"><span>综合评价：</span>
+							<span style="color:red;">非常满意</span>
+						</p>
+					</div>
+					<p class="m09_detail">评价内容：医生太好了，太棒了，感动啊</p>
+					<dl class="m09_userdl">
+						<dt class="m09_userdt"><img src="./doctor/a.gif"></dt>
+						<dd class="m09_userdd1"><span>匿名</span><span>未知</span><span>来自：保密</span></dd>
+						<dd class="m09_userdd2">2019-10-31</dd>
+					</dl>
+				</div>
+				<div class="m09_contdiv1 ev_cont1div1">
+					<div class="m09_evaluate">
+						<p class="m09_evaluatep clears"><span>综合评价：</span>
+							<span style="color:red;">非常满意</span>
+						</p>
+					</div>
+					<p class="m09_detail">评价内容：非常不错的医生，说话很温柔，解答的很详细，很有耐心</p>
+					<dl class="m09_userdl">
+						<dt class="m09_userdt"><img src="./doctor/a.gif"></dt>
+						<dd class="m09_userdd1"><span>匿名</span><span>男</span><span>来自：保密</span></dd>
+						<dd class="m09_userdd2">2019-10-31</dd>
+					</dl>
+				</div>
+			</div>
+
+			<!-- 文章相关 2014-12-29 -->
+			<div class="DorAbout">
+				<ul>
+					<li><i class="i1"></i><b>职业资格医师认证</b><span>均持有医师证，卫生局官网可查真伪</span></li>
+					<li><i class="i2"></i><b>100%真实医生服务</b><span>专家本人提供服务</span></li>
+					<li><i class="i4"></i><b><a href="tel:075536907449">0755-36907449</a></b><span>服务热线：每天8点-20点</span></li>
+				</ul>
+			</div>
+
+
+			<script type="text/javascript">
+				var is_ajax = false;
+				$("#op_doc_attention").click(function() {
+					if (window.navigator.onLine == false) {
+						alert('请检查您的网络连接');
+						return false;
+					}
+					window.location.href = 'http://m.120ask.com/kuaiwen/site/common/attention_us';
+					return false; //$('#show_attention').text('加关注.');
+					if (!is_ajax) {
+						is_ajax = true;
+						var obj = $(this);
+						var doc_id = 81591;
+						if (doc_id) {
+							$.ajax({
+								url: "/kuaiwen/site/doctor/change_attention",
+								type: "POST",
+								data: {
+									'id': doc_id
+								},
+								dataType: "json",
+								success: function(data) {
+									if (data.status == 'success') {
+										obj.toggleClass("m17_attena2on");
+										var show_attention = $('#show_attention').text();
+										if (show_attention == '已关注') {
+											$('#show_attention').empty().text('加关注');
+										} else {
+											$('#show_attention').empty().text('已关注');
+										}
+									} else {
+										alert(data.msg);
+									}
+									is_ajax = false;
+								},
+								error: function(XMLHttpRequest, textStatus, errorThrown) {
+									is_ajax = false;
+								}
+							});
+						}
+					} else {
+						alert('操作进行中....');
+					}
+				});
+
+				$('#give_gift').click(function() {
+					if (window.navigator.onLine == false) {
+						alert('请检查您的网络连接');
+						return false;
+					}
+
+					$.get('/kuaiwen/site/doctor/test', function(a) {
+						if (a) {
+							window.location.href = '/kuaiwen/site/doctor/gift_home?id=81591';
+						} else {
+							window.location.href = 'https://m.120.net/user/new_login';
+						}
+					});
+
+				});
+
+
+				$(function() {
+
+					var $txt1 = $(".v1HomeIntrodivp .txt1");
+					var $txt2 = $(".v1HomeIntrodivp .txt2");
+					if ($txt1.text().length > 30) {
+						var $value = $txt1.text().substr(0, 30) + '...';
+						$txt2.text($value);
+						$txt1.hide();
+					} else {
+						$txt2.text($txt1.text());
+						$txt1.hide();
+						$('.s_zk').hide();
+					}
+					$(".v1HomeIntrodiv").click(function() {
+						if ($(this).find('.s_zk').text() == "展开↓") {
+							$txt1.show();
+							$txt2.hide();
+							$(this).find('.s_zk').text('收起↑')
+						} else {
+							$txt2.show();
+							$txt1.hide();
+							$(this).find('.s_zk').text('展开↓');
+						}
+					})
+
+					$(".timeBtn").click(function() {
+						var boxHeight = parseInt($(".timeBox").css("height"));
+						$(".timeBox").css("margin-top", -boxHeight / 2);
+						$('.timeBox').show();
+						$('.timeBoxBg').show();
+						$("body").on('touchmove', function(event) {
+							event.preventDefault();
+						}, false);
+					});
+					$(".closeBtn").click(function() {
+						$(".timeBox").hide();
+						$('.timeBoxBg').hide();
+						$("body").unbind('touchmove');
+					});
+				})
+			</script>
+
+			<div class="SerBottom">
+				<span style="font-size:16px;font-weight:bold;">单次咨询：<b style="padding-left:0px;">￥<strong class="buyThis">99</strong></b></span>
+				<a target="_top" href=""
+				 class="boxBtn3 server_online" id="81591" style="border-radius:0px;height:auto;margin-top:0px;">立即向TA咨询</a>
+
+				<script>
+					function showBox(val) {
+						var obj = $('#stip_box');
+						var txt = $('#stip_txt');
+						txt.html(val);
+						obj.show();
+					}
+					$(document).ready(function() {
+						$('#stip_sure').bind('click', function() {
+							$('#stip_box').hide();
+							window.location.href = $('.server_offline').attr('href');
+						});
+						$('#stip_cancel').bind('click', function() {
+							$('#stip_box').hide();
+						});
+					});
+
+					$('.server_offline').click(function() {
+						showBox('医生当前电话在线，仅可电话咨询!<br>是否继续购买?');
+						return false;
+						/**
+						if(confirm("您购买的医生不在线,可能无法及时回复是否继续购买?")){
+							window.location.href = $(this).attr('href');
+						}else{ 
+							return false;
+						}
+						**/
+					});
+				</script>
+			</div>
+		</div>
+		<script>
+			window.onload = function() {
+				function GetRequest() {
+					var url = location.search; //获取url中"?"符后的字串
+					var theRequest = new Object();
+					if (url.indexOf("?") != -1) {
+						var str = url.substr(1);
+						strs = str.split("&");
+						for (var i = 0; i < strs.length; i++) {
+							theRequest[strs[i].split("=")[0]] = strs[i].split("=")[1] ? unescape(strs[i].split("=")[1]) : '';
+						}
+					}
+					return theRequest;
+				}
+				var ajax_busy = false;
+
+				function ajax_load(url, parmar) {
+					if (!ajax_busy) {
+						$.ajax({
+							url: url,
+							data: parmar,
+							type: "POST",
+							beforeSend: function() {
+								$('.ListSearchBg').show();
+								$('.ListSearchBox').show();
+							},
+							complete: function() {
+								ajax_busy = false;
+								$('.ListSearchBg').hide();
+								$('.ListSearchBox').hide();
+							},
+							dataType: 'json',
+							success: function(data) {
+								if (data.status == 'success') {
+									$('#main').empty().append(data.html);
+								} else {
+									alert(data.msg);
+									window.history.back();
+								}
+							},
+							error: function(XMLHttpRequest, textStatus, errorThrown) {
+								alert(XMLHttpRequest + '/' + textStatus + '/' + errorThrown);
+							}
+						});
+					}
+				}
+				var parmar = GetRequest();
+				var init_url = '/kuaiwen/site/doctor';
+				ajax_load(init_url, parmar);
+			}
+		</script>
+
+		<div class="ListSearchBg" style="display: none;"></div>
+		<div class="ListSearchBox" style="display: none;">
+			<span></span>
+			<i></i>
+		</div>
+		<article class="SureBuy" id="stip_box">
+			<div class="SureBuy_C">
+				<div class="SureBuy_txt" id="stip_txt"></div>
+				<div class="SureBuy_btn">
+					<button id="stip_cancel">否</button>
+					<button id="stip_sure">是</button>
+				</div>
+			</div>
+		</article>
+	</body>
+</html>
