@@ -8,9 +8,9 @@
 		<meta content="yes" name="apple-mobile-web-app-capable">
 		<meta content="black" name="apple-mobile-web-app-status-bar-style">
 		<meta content="telephone=no" name="format-detection">
-		<title>咨询医生1</title>
+		<title>咨询医生</title>
 		<meta name="description" content="">
-		<meta name="keywords" content="提问，问医生">
+		<meta name="keywords" content="">
 		<meta http-equiv="Cache-Control" content="no-transform">
 		<meta http-equiv="Cache-Control" content="no-siteapp">
 		<link rel="icon" href="http://www.120ask.com/favicon.ico" type="image/x-icon">
@@ -28,17 +28,19 @@
 			<div class="question-page">
 				<div class="question-about">
 					<div class="write-title"><span>标题：</span><input type="text" onblur="statAskOption(&#39;ask_title&#39;,&#39;title&#39;)"
-						 id="ask_title" value="" placeholder="用一句话概括你的病症（不少于10个字）"></div>
+						 id="ask_title" value="" placeholder="请输入标题">
+					</div>
+					<!-- <img src="doctor/ask_icon.png" > -->
 					<div class="write-title write-cont">
 						<span>详情：</span>
-						<textarea placeholder="详细描述发病时间，主要症状，病情变化，治疗经过以及想要获得的帮助（20字以上）" onblur="statAskOption(&#39;ask_content&#39;,&#39;content&#39;)"
+						<textarea placeholder="请输入详情" onblur="statAskOption(&#39;ask_content&#39;,&#39;content&#39;)"
 						 id="ask_content"></textarea>
 					</div>
 					<input type="hidden" name="ask_name" id="ask_name" value="">
 
 					<div class="load-img">
 						<div class="img-part">
-							<form method="post" enctype="multipart/form-data" action="http://m.120ask.com/askg/asktype/upload" target="upload"
+							<form method="post" enctype="multipart/form-data" action="" target="upload"
 							 id="publisher_image_form">
 								<div id="imgShows">
 								</div>
@@ -57,11 +59,16 @@
 
 					<div class="select-msg clears">
 						<div class="select-sex clears"><span>性别：</span><var class="clears"><i class="on">男</i><i>女</i></var></div>
-						<div class="select-birth"><span style="width:50px;">年龄：</span><input type="tel" placeholder="请输入" id="user_age"><b><i
-								 id="age_type">岁</i><select>
+						<div class="select-birth"><span style="width:50px;">年龄：</span><input type="tel" placeholder="请输入" id="user_age">
+							<b>
+								<i id="age_type">岁</i>
+								<select>
 									<option>岁</option>
 									<option>月</option>
-								</select><em></em></b></div>
+								</select>
+								<em></em>
+							</b>
+						</div>
 					</div>
 
 					<input type="hidden" name="phone" id="phone" value="18768871893">
@@ -139,15 +146,15 @@
 			$(function() {
 				$(".select-sex var i").click(function() {
 					$(this).addClass("on").siblings().removeClass("on")
-				})
+				});
 				$(".select-birth input").change(function() {
 					var val = $(this).val();
 					$(this).prev("i").html(val);
-				})
+				});
 				$(".select-birth b select").change(function() {
 					var val = $(this).val();
 					$(this).prev("i").html(val)
-				})
+				});
 				$(".reward-part ul li").each(function() {
 					$(this).click(function() {
 						var txt = $(this).text();
@@ -169,12 +176,12 @@
 						$(".ask-bottom-btn span").html("悬赏支付<i>" + txt + "</i>");
 						$(".ask-bottom-btn a").html("确定支付");
 					})
-				})
+				});
 				$(".pay-box .pay-box-bg").click(function() {
 					$(".ListSearchBg").css("display", "none");
 					$(".ListSearchBox").css("display", "none");
 					$(this).parent().css("display", "none")
-				})
+				});
 			})
 
 			function reloadpic() {
@@ -211,7 +218,7 @@
 							imgRes.push(imgs[i].value);
 						});
 					} catch (e) {
-						alert(e);
+						//alert(e);
 					}
 					var token = 'OXZrR0JBNDFhEFk1LDgEdncFITU2KAUAXUA0Lw4EfnBvFx0sJhcZdQ==';
 
@@ -346,7 +353,7 @@
 
 			function imgUpload(upload_field) {
 				if (!upload_field.value) {
-					alert(upload_field.value);
+					//alert(upload_field.value);
 					return false;
 				}
 				var imgHtml =
@@ -463,7 +470,6 @@
 				s.parentNode.insertBefore(hm, s);
 			})();
 		</script>
-
 		<script>
 			function showError(msg) {
 				$(".show-error").fadeIn(1000);

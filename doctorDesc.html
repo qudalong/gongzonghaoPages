@@ -3,15 +3,15 @@
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<title>医生详情</title>
-		<meta name="description" content="快速问医生">
-		<meta name="keywords" content="快速问医生">
+		<meta name="description" content="">
+		<meta name="keywords" content="">
 		<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
 		<meta content="yes" name="apple-mobile-web-app-capable">
 		<meta content="black" name="apple-mobile-web-app-status-bar-style">
 		<meta content="telephone=no" name="format-detection">
 		<link rel="stylesheet" type="text/css" href="./doctor/public.css">
 		<link rel="stylesheet" type="text/css" href="./doctor/doctor.css">
-		<script src="./doctor/jquery-1.7.1.min.js		"></script>
+		<script src="./doctor/jquery-1.7.1.min.js"></script>
 		<script>
 			if (typeof window.wView !== "undefined") {
 				window.wView.allowsInlineMediaPlayback = "YES";
@@ -67,7 +67,9 @@
 			<!-- 2014-12-22 liuna end -->
 			<!-- 分享 -->
 			<div class="HomeSerPart2">
-				<h4 class="clears"><img src="./doctor/a.gif" width="17" height="20"><span>亲：我为您提供以下服务</span></h4>
+				<h4 class="clears">
+					<img src="./doctor/a.gif" width="17" height="20"><span>亲：我为您提供以下服务</span>
+				</h4>
 				<div class="Ways">
 					<div class="WaysOne">
 						<a target="_top" href="">
@@ -84,11 +86,12 @@
 					</div>
 					<div class="service_item">
 						<ul>
-							<img src="./doctor/videoico.png">
-							<div style="padding-top:3px;">
-								<b>视频咨询</b> 与医生面对面咨询
-							</div>
-							<em style="padding-top:13px;"><b>￥300元/次</b></em>
+							<li>
+								<img src="./doctor/videoico.png">
+								<div style="padding-top:3px;">
+									<b>视频咨询</b> 与医生面对面咨询
+								</div>
+								<em style="padding-top:13px;"><b>￥300元/次</b></em>
 							</li>
 						</ul>
 					</div>
@@ -191,6 +194,7 @@
 						ulShow();
 					});
 				}
+
 				$(document).ready(function() {
 					change_doc_tag();
 				});
@@ -253,7 +257,7 @@
 				var is_ajax = false;
 				$("#op_doc_attention").click(function() {
 					if (window.navigator.onLine == false) {
-						alert('请检查您的网络连接');
+						//alert('请检查您的网络连接');
 						return false;
 					}
 					window.location.href = 'http://m.120ask.com/kuaiwen/site/common/attention_us';
@@ -280,7 +284,7 @@
 											$('#show_attention').empty().text('已关注');
 										}
 									} else {
-										alert(data.msg);
+										//alert(data.msg);
 									}
 									is_ajax = false;
 								},
@@ -290,13 +294,13 @@
 							});
 						}
 					} else {
-						alert('操作进行中....');
+						//alert('操作进行中....');
 					}
 				});
 
 				$('#give_gift').click(function() {
 					if (window.navigator.onLine == false) {
-						alert('请检查您的网络连接');
+						//alert('请检查您的网络连接');
 						return false;
 					}
 
@@ -355,8 +359,7 @@
 
 			<div class="SerBottom">
 				<span style="font-size:16px;font-weight:bold;">单次咨询：<b style="padding-left:0px;">￥<strong class="buyThis">99</strong></b></span>
-				<a target="_top" href=""
-				 class="boxBtn3 server_online" id="81591" style="border-radius:0px;height:auto;margin-top:0px;">立即向TA咨询</a>
+				<a target="_top" href="" class="boxBtn3 server_online" id="81591" style="border-radius:0px;height:auto;margin-top:0px;">立即向TA咨询</a>
 
 				<script>
 					function showBox(val) {
@@ -425,12 +428,12 @@
 								if (data.status == 'success') {
 									$('#main').empty().append(data.html);
 								} else {
-									alert(data.msg);
+									//alert(data.msg);
 									window.history.back();
 								}
 							},
 							error: function(XMLHttpRequest, textStatus, errorThrown) {
-								alert(XMLHttpRequest + '/' + textStatus + '/' + errorThrown);
+								//alert(XMLHttpRequest + '/' + textStatus + '/' + errorThrown);
 							}
 						});
 					}
