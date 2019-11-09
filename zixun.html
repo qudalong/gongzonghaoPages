@@ -18,30 +18,28 @@
 		<script src="./doctor/jquery-1.7.1.min.js"></script>
 	</head>
 	<body>
-		<header class="s_header">
-			<nav>
-				<a href="javascript:void(0);" onclick="history.go(-1)" class="bg"><span>返回</span></a>
-				<a href="https://m.120ask.com/">快速问医生</a>
-			</nav>
-		</header>
+		<div class="tip">
+			认证医生提供健康建议，10分钟内恢复，已累计帮助患者解决2000万个健康问题，好评率99%。
+		</div>
 		<div id="page">
 			<div class="question-page">
 				<div class="question-about">
 					<div class="write-title"><span>标题：</span><input type="text" onblur="statAskOption(&#39;ask_title&#39;,&#39;title&#39;)"
 						 id="ask_title" value="" placeholder="请输入标题">
 					</div>
+
 					<!-- <img src="doctor/ask_icon.png" > -->
 					<div class="write-title write-cont">
 						<span>详情：</span>
-						<textarea placeholder="请输入详情" onblur="statAskOption(&#39;ask_content&#39;,&#39;content&#39;)"
-						 id="ask_content"></textarea>
+						<textarea placeholder="请输入详情" onblur="statAskOption(&#39;ask_content&#39;,&#39;content&#39;)" id="ask_content"></textarea>
+						<div class="demo">示例?</div>
 					</div>
 					<input type="hidden" name="ask_name" id="ask_name" value="">
-
+					<div class="write-title"><span>手机号：</span><input type="text" value="" placeholder="请输入手机号">
+					</div>
 					<div class="load-img">
 						<div class="img-part">
-							<form method="post" enctype="multipart/form-data" action="" target="upload"
-							 id="publisher_image_form">
+							<form method="post" enctype="multipart/form-data" action="" target="upload" id="publisher_image_form">
 								<div id="imgShows">
 								</div>
 								<span>
@@ -58,8 +56,13 @@
 					</div>
 
 					<div class="select-msg clears">
-						<div class="select-sex clears"><span>性别：</span><var class="clears"><i class="on">男</i><i>女</i></var></div>
-						<div class="select-birth"><span style="width:50px;">年龄：</span><input type="tel" placeholder="请输入" id="user_age">
+						<div class="select-sex clears">
+							<span>性别：</span>
+							<var class="clears"><i class="on">男</i><i>女</i></var>
+						</div>
+						<div class="select-birth">
+							<span style="width:50px;">年龄：</span>
+							<input type="tel" placeholder="请输入年龄" id="user_age">
 							<b>
 								<i id="age_type">岁</i>
 								<select>
@@ -70,6 +73,7 @@
 							</b>
 						</div>
 					</div>
+
 
 					<input type="hidden" name="phone" id="phone" value="18768871893">
 					<input type="hidden" name="code" id="code" value="99">
@@ -95,7 +99,10 @@
 				<input type="hidden" id="osn" value="">
 				<div style="height: 55px;"></div>
 				<div class="ask-bottom-btn">
-					<span><b>剩余名额：193人</b><var>免费向义诊医生咨询</var></span>
+					<span>
+						<b>剩余名额：193人</b>
+						<var>免费向义诊医生咨询</var>
+					</span>
 					<a href="javascript:void(0);" onclick="dosubmit(1); _czc.push([&#39;_trackEvent&#39;, &#39;ask_new&#39;, &#39;onclick&#39;, &#39;3&#39;]);">提交咨询</a>
 				</div>
 
@@ -111,17 +118,25 @@
 		<div class="confirm_up" style="display:none;">
 			<div class="cont">
 				<span class="sp">手机号已绑定其他账号，是否使用此手机号绑定的账号进行登录提问？</span>
-				<span class="btns"><var id="mobile_login">确定</var><var onclick="this.parentNode.parentNode.parentNode.style.display=&#39;none&#39;;">取消</var></span>
+				<span class="btns">
+					<var id="mobile_login">确定</var>
+					<var onclick="this.parentNode.parentNode.parentNode.style.display=&#39;none&#39;;">取消</var>
+				</span>
 			</div>
 		</div>
 		<div class="up_notice" style="display: none;">
 			<div class="cont">
-				<var class="close" onclick="this.parentNode.parentNode.style.display=&#39;none&#39;;">×</var>
+				<var class="close" onclick="this.parentNode.parentNode.style.display=&#39;none&#39;">×</var>
 				<div class="c">
 					<b>免费咨询通知</b>
 					<span class="sp1"></span>
 					<span class="sp2"><img width="100%" src="./zixun_files/up_exampleimg.jpg"></span>
-					<div class="b"><span><em>温馨提示：</em>如需再次提问咨询更多的医生，请点击 → </span><a href="javascript:void(0);" onclick="this.parentNode.parentNode.parentNode.parentNode.style.display=&#39;none&#39;;">悬赏提问</a></div>
+					<div class="b">
+						<span>
+							<em>温馨提示：</em>如需再次提问咨询更多的医生，请点击 →
+						</span>
+						<a href="javascript:void(0);" onclick="this.parentNode.parentNode.parentNode.parentNode.style.display=&#39;none&#39;;">悬赏提问</a>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -132,7 +147,32 @@
 				<span id="up_tips_span"></span>
 			</div>
 		</div>
+		<!-- 实例弹窗 -->
+		<div class="bgshadw" style="display: none;">
+			<div class="box">
+				<div class="close">X</div>
+				<div class="b-title">咨询示例</div>
+				<div class="b-content">
+					<div class="row">
+						<div class="lable">疾病概述：</div>
+						<div class="con">早上咳嗽比较多是什么原因？</div>
+					</div>
+					<div class="row">
+						<div class="lable">疾病概述：</div>
+						<div class="con">18岁男性，近期早上起床后会经常咳嗽，这种情况持续大概有五天了，伴有咽痛症状，请问可以如何缓解？</div>
+					</div>
+				</div>
+			</div>
+		</div>
 		<script type="text/javascript">
+			// 实例
+			$('.demo').click(function() {
+				$('.bgshadw').css('display', 'block');
+			});
+			$('.close').click(function() {
+				$('.bgshadw').css('display', 'none');
+			});
+
 			var par_json = {};
 			var _czc = _czc || [];
 			_czc.push(['_trackEvent', 'ask_new', 'show', 'total']);
