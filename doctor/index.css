@@ -1435,11 +1435,9 @@ i {
 	-webkit-box-flex: 1;
 	width: 100%;
 	padding-left: 10px;
-	height: 19px;
-	overflow: hidden;
 	text-overflow: ellipsis;
-	white-space: nowrap;
 	font-size: 18px;
+	line-height: 1.6;
 }
 
 .detail-about .part-1 b em {
